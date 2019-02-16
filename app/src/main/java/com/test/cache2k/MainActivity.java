@@ -2,6 +2,7 @@ package com.test.cache2k;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -14,5 +15,10 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    cache.put("key", "test value");
+
+    TextView textView = findViewById(R.id.textview);
+    textView.setText("Value from cache: " + cache.get("key"));
   }
 }

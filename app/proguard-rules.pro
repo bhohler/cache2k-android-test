@@ -25,6 +25,8 @@
 -dontwarn javax.cache.**
 -dontwarn javax.management.**
 -dontwarn javax.naming.**
+-dontwarn org.cache2k.impl.xmlConfiguration.**
+-dontwarn org.cache2k.impl.serverSide.**
 -keep interface org.cache2k.spi.Cache2kCoreProvider
 -keep public class * extends org.cache2k.spi.Cache2kCoreProvider
 
